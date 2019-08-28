@@ -1,0 +1,8 @@
+spring:
+  data:godb:
+       #      host: 11.0.44.134
+             host: 127.0.0.1
+             port: 27017
+             database: test
+server:
+  port: 8090

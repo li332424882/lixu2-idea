@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+   <script>
+       window.onload=function() {
+
+           alert("1111")
+           var username = document.getElementById("username");
+           username.onblur = function checkUsername(username) {
+
+               //1.获取用户名的值
+               var username = document.getElementById("username").value;
+               //2.定义正则表达式
+               alert(username)
+               var reg_username = /^\w{6,12}$/;
+               //3.判断值是否符合正则的规则
+               var flag = reg_username.test(username);
+               alert(flag)
+               //4.提示信息
+               var span1 = document.getElementById("span1");
+               if (flag) {
+                   //提示绿色对勾
+                   span1.innerHTML = "<font color='blue'>格式正确</font>";
+               } else {
+                   //提示红色用户名有误
+                   span1.innerHTML = "<font color='red'>用户名格式有误</font>";
+               }
+           }
+
+
+
+
+       }
+
+   </script>
+<body>
+
+<input id="username" name="name1"> <span id="span1"></span>
+
+</body>
+</html>
